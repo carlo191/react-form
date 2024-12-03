@@ -1,11 +1,18 @@
-// import { useState } from 'react'
+import React, { useState } from "react";
 
 function App() {
+  const [firstName, setFirstName] = useState("Marco");
+
   return (
     <>
-      <div className="container">
-        <h1 className="mt-5">Hello World</h1>
-      </div>
+      <form>
+        <input
+          type="text"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+        />
+        <p>Il tuo nome è {firstName}</p>
+      </form>
     </>
   );
 }
